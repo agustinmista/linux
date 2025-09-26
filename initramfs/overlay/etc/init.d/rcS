@@ -1,0 +1,27 @@
+#!/bin/sh
+
+mkdir -p /proc /dev /sys /tmp
+mount -t proc none /proc
+mount -t devtmpfs dev /dev
+mount -t sysfs none /sys
+
+echo "linux" > /proc/sys/kernel/hostname
+
+clear
+echo "Boot took $(cut -d' ' -f1 /proc/uptime)s"
+
+cat <<EOM
+
+        much linux
+                     such wow
+
+    very boot
+                        many fast
+
+            so kernel
+
+EOM
+
+setsid cttyhack sh
+exec /bin/sh
+

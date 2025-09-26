@@ -1,0 +1,5 @@
+::respawn:/bin/cttyhack /bin/sh
+::askfirst:/bin/cttyhack /bin/sh
+::sysinit:/etc/init.d/rcS
+::ctrlaltdel:/bin/umount -a -r
+::shutdown:/bin/umount -a -r
